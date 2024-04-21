@@ -50,6 +50,7 @@ const handleRequest = async ({
         inputVariables: ["userPrompt", "conversationHistory"],
       }),
     });
+    console.log(inquiryChain, prompt, conversationHistory)
     const inquiryChainResult = await inquiryChain.call({
       userPrompt: prompt,
       conversationHistory,
