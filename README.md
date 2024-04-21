@@ -1,5 +1,8 @@
 # Supabase Langchain Chatbot Demo
 
+Forked repo: <https://github.com/supabase-community/langchain-chatbot-demo>
+YouTube Video: <https://m.youtube.com/watch?v=Tt45NrVIBn8>
+
 To run this demo, you need to have:
 
 1. An OpenAI account. If you don't have one, you can sign up for free at [openai.com](https://www.openai.com).
@@ -7,28 +10,28 @@ To run this demo, you need to have:
 
 ## Setup
 
-1. Clone this repository
+1.Clone this repository
 
 ```bash
 git clone git@github.com:thorwebdev/langchain-chatbot-demo.git
 ```
 
-2. Install dependencies
+2.Install dependencies
 
 ```bash
 cd langchain-chatbot-demo
 npm install
 ```
 
-3. Start Supabase
+3.Start Supabase
 
 ```bash
 supabase start
 ```
 
-5. Create a `.env` file in the root directory of the project and add your API keys:
+4.Create a `.env` file in the root directory of the project and add your API keys:
 
-```
+```env
 OPENAI_API_KEY=...
 NEXT_PUBLIC_SUPABASE_URL=...
 NEXT_PUBLIC_SUPABASE_ANON_KEY=...
@@ -38,7 +41,7 @@ API_ROOT="http://localhost:3000"
 
 When running Supabase locally you can run `supabase status` to get the local credentials.
 
-6. [Optional] generate types (only needed after making db schema schanges)
+5.[Optional] generate types (only needed after making db schema schanges)
 
 ```bash
 npx supabase gen types typescript --local --schema public > src/types/supabase.ts
