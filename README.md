@@ -24,7 +24,7 @@ npm install
 ```
 
 3.Start Supabase
-
+3a. -> start Docker
 ```bash
 supabase start
 ```

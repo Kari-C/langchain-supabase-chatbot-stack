@@ -24,6 +24,7 @@ import {
 
 import styles from "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 
+
 type ConversationEntry = {
   message: string;
   speaker: "bot" | "user";
@@ -48,14 +49,14 @@ const updateChatbotMessage = (
   return conversation.some((e) => e.id === interactionId)
     ? updatedConversation
     : [
-        ...updatedConversation,
-        {
-          id: interactionId,
-          message: message.token,
-          speaker: "bot",
-          date: new Date(),
-        },
-      ];
+      ...updatedConversation,
+      {
+        id: interactionId,
+        message: message.token,
+        speaker: "bot",
+        date: new Date(),
+      },
+    ];
 };
 
 export default function Home() {

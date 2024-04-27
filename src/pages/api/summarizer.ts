@@ -23,6 +23,7 @@ const formatInstructions = parser.getFormatInstructions();
 const limiter = new Bottleneck({
   minTime: 5050,
 });
+console.log(formatInstructions, "formatInstructions");
 
 console.log(summarizerDocumentTemplate.length);
 const chunkSubstr = (str: string, size: number) => {

@@ -27,6 +27,7 @@ const templates = {
         URLS: {urls}
 
         Final Answer: `,
+
   summarizerTemplate: `Shorten the text in the CONTENT, attempting to answer the INQUIRY You should follow the following rules when generating the summary:
     - Any code found in the CONTENT should ALWAYS be preserved in the summary, unchanged.
     - Code will be surrounded by backticks (\`) or triple backticks (\`\`\`).
@@ -41,6 +42,7 @@ const templates = {
 
     Final answer:
     `,
+
   summarizerDocumentTemplate: `Summarize the text in the CONTENT. You should follow the following rules when generating the summary:
     - Any code found in the CONTENT should ALWAYS be preserved in the summary, unchanged.
     - Code will be surrounded by backticks (\`) or triple backticks (\`\`\`).
@@ -52,6 +54,7 @@ const templates = {
 
     Final answer:
     `,
+
   inquiryTemplate: `Given the following user prompt and conversation log, formulate a question that would be the most relevant to provide the user with an answer from a knowledge base.
     You should follow the following rules when generating and answer:
     - Always prioritize the user prompt over the conversation log.
