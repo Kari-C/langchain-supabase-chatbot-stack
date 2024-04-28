@@ -1,3 +1,8 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
 :root {
   --primary-color: #192bd5;
   --secondary-color: #f5f5f5;
@@ -28,11 +33,13 @@ $black-50: lighten($black, 5%);
 
 html,
 body {
-  font-family: "mediumllweb", "sans-serif";
-  // background: var(--black);
 
-  font-size: 18px;
-
+  font-size: 22px;
+  height: 98vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
   input {
     font-size: 1.2em;
   }
@@ -40,7 +47,6 @@ body {
   button {
     font-size: 1.2em;
     
-  
   }
 }
 
