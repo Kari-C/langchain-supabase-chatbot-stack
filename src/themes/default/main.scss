@@ -1,0 +1,44 @@
+// This whole /default folder is to override 
+// the default theme colors for the 
+// Chatscope Chat UI Kit components
+
+@charset "utf-8";
+@import "./variables";
+@import "./helpers/mixins";
+@import "./helpers/functions";
+@import "../../../node_modules/@chatscope/chat-ui-kit-styles/themes/default/main.scss";
+
+div .cs-message-list__typing-indicator-container div {
+    color: #6d4700;
+    }
+    
+    div .cs-main-container,
+    div .cs-chat-container .cs-message-input {
+    border: 0px;
+    }
+    
+    div .cs-message--incoming .cs-message__content,
+    div .cs-chat-container .cs-message-input,
+    div .ps__thumb-y,
+    div .ps__rail-y:hover .ps__thumb-y,
+    div .ps__rail-y:active .ps__thumb-y {
+    background-color: #ffc436;
+    background-color: var(--black-50);
+    }
+    
+    div .cs-message-input__content-editor,
+    div .cs-message-input__content-editor-wrapper,
+    div .cs-message-list,
+    div .ps__rail-y:hover,
+    div .ps .ps__rail-y:hover,
+    div .ps__rail-y {
+    background-color: #ffebbb;
+    }
+    
+    div .cs-message--outgoing .cs-message__content {
+    background-color: #ffa552;
+    }
+    
+    div .cs-typing-indicator__dot {
+    background-color: #6d4700;
+    }
