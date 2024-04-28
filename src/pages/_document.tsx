@@ -9,8 +9,11 @@ export default function Document() {
           href="https://cdn.jsdelivr.net/npm/katex@0.15.0/dist/katex.min.css"
           integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"
         />
+
+
       </Head>
-      <body>
+
+      <body className="bg-white dark:bg-slate-800 dark:text-white">
         <Main />
         <NextScript />
       </body>
