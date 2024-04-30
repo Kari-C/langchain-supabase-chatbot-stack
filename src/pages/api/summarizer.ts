@@ -5,10 +5,10 @@ import { PromptTemplate } from "langchain/prompts";
 import Bottleneck from "bottleneck";
 import { StructuredOutputParser } from "langchain/output_parsers";
 
-const llm = new OpenAI({
+const chat = new OpenAI({
   concurrency: 10,
   temperature: 0,
-  modelName: "gpt-3.5-turbo",
+  modelName: "gpt-4",
 });
 
 const { summarizerTemplate, summarizerDocumentTemplate } = templates;

@@ -1,9 +1,7 @@
 import { CallbackManager } from "langchain/callbacks";
 import { LLMChain } from "langchain/chains";
 import { ChatOpenAI } from "langchain/chat_models/openai";
-import { HumanMessage } from "@langchain/core/messages";
 import { OpenAI } from "langchain/llms/openai";
-
 import { PromptTemplate } from "langchain/prompts";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { summarizeLongDocument } from "./summarizer";
@@ -30,7 +28,7 @@ const handleRequest = async ({
   try {
     const channel = supabaseAuthedClient.channel(userId);
     const { data } = await supabaseAuthedClient
-      .from("talkHistory")
+      .from("conversations")
       .insert({ speaker: "ai", user_id: userId })
       .select()
       .single()
@@ -136,7 +134,7 @@ const handleRequest = async ({
             async handleLLMEnd(result) {
               // Store answer in DB
               await supabaseAuthedClient
-                .from("chatHistory")
+                .from("conversations")
                 .update({ entry: result.generations[0][0].text })
                 .eq("id", interactionId);
               await channel.send({
