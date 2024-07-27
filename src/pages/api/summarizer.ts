@@ -5,7 +5,7 @@ import { PromptTemplate } from "langchain/prompts";
 import Bottleneck from "bottleneck";
 import { StructuredOutputParser } from "langchain/output_parsers";
 
-const chat = new OpenAI({
+const llm = new OpenAI({
   concurrency: 10,
   temperature: 0,
   modelName: "gpt-4",

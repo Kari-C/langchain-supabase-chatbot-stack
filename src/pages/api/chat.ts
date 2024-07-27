@@ -30,7 +30,7 @@ const handleRequest = async ({
   try {
     const channel = supabaseAuthedClient.channel(userId);
     const { data } = await supabaseAuthedClient
-      .from("talkHistory")
+      .from("conversations")
       .insert({ speaker: "ai", user_id: userId })
       .select()
       .single()
@@ -136,7 +136,7 @@ const handleRequest = async ({
             async handleLLMEnd(result) {
               // Store answer in DB
               await supabaseAuthedClient
-                .from("chatHistory")
+                .from("conversations")
                 .update({ entry: result.generations[0][0].text })
                 .eq("id", interactionId);
               await channel.send({

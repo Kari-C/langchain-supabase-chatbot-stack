@@ -115,7 +115,7 @@ export default function Home() {
     try {
       setBotIsTyping(true);
       // Original api was /chatScrape
-      const response = await fetch("/api/kchat", {
+      const response = await fetch("/api/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -140,7 +140,7 @@ export default function Home() {
       </Head>
       <main >
         <div
-          className="bg-white dark:bg-slate-800 dark:text-white"
+          className="bg-white dark:text-white"
           style={{ position: "relative", height: "92vh", overflow: "hidden" }}
         >
           <MainContainer>
@@ -163,6 +163,7 @@ export default function Home() {
                 {conversation.map((entry, index) => {
                   return (
                     <Message
+
                       key={index}
                       style={{ width: "90%" }}
                       model={{
@@ -175,6 +176,7 @@ export default function Home() {
                     >
                       <Message.CustomContent>
                         <ReactMarkdown
+                            className="text-white"
                           remarkPlugins={[remarkMath, rehypeKatex]}
                         >
                           {entry.message}
