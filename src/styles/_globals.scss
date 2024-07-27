@@ -16,7 +16,6 @@
   --denary-color: #f5f5f5;
   --black: #000;
   
-
   --black-50: #{lighten(#000, 10%)};
 
   --gutter: 20px;
@@ -24,6 +23,7 @@
   --gutter-smallest: 5px;
   --gutter-double: 40px;
   --gutter-triple: 60px;
+  --menu-vh: 7vh;
 }
 
 $black: #000;
@@ -35,18 +35,13 @@ html,
 body {
 
   font-size: 22px;
-  height: 98vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
+
   input {
     font-size: 1.2em;
   }
 
   button {
     font-size: 1.2em;
-    
   }
 }
 
@@ -55,3 +50,22 @@ p>a {
   text-decoration: underline;
 }
 
+
+.navMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: var(--gutter);
+  height: var(--menu-vh);
+  
+  ul {
+    display: flex;
+    flex-direction: row;
+  
+    a {
+      padding-left: var(--gutter);
+    }
+  
+  }
+}

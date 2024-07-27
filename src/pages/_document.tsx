@@ -1,22 +1,20 @@
 import { Html, Head, Main, NextScript } from "next/document";
-
+import Link from 'next/link';
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/katex@0.15.0/dist/katex.min.css"
-          integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"
-        />
-
-
       </Head>
-
-      <body className="bg-white dark:bg-slate-800 dark:text-white">
+      <nav className="navMenu bg-white dark:bg-slate-900 dark:text-white">
+        <ul>
+          <Link href="/">Home</Link>
+          <Link href="/settings">Settings</Link>
+        </ul>
+      </nav>
+      <body className="bg-white dark:bg-slate-800 dark:text-white" >
         <Main />
         <NextScript />
       </body>
-    </Html>
+    </Html >
   );
 }

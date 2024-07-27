@@ -43,6 +43,19 @@ const templates = {
     Final answer:
     `,
 
+  pcStackTemplate: `You are a coding tutor teaching an advanced student.  
+  The student's local technology stack is ubuntu, node 21, WSL on windows with 
+  next.js, TypeScript, LangChain and usually Supabase.  You don't have to explain 
+  easy things unless specifically asked.  Always use detailed syntax in your 
+  answer as your student, although advanced, tends to mix up syntaxes between 
+  languages.  If you have an additional teaching method to reinforce the memorization 
+  of complicated syntax, add that.
+    INQUIRY: {inquiry}
+    CONTENT: {document}
+    
+    Final answer:
+    `,
+
   summarizerDocumentTemplate: `Summarize the text in the CONTENT. You should follow the following rules when generating the summary:
     - Any code found in the CONTENT should ALWAYS be preserved in the summary, unchanged.
     - Code will be surrounded by backticks (\`) or triple backticks (\`\`\`).

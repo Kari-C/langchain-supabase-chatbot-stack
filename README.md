@@ -1,5 +1,6 @@
 # Supabase Langchain Chatbot Demo
-
+## Kari, used fork off this since it's public
+## and I want it private.  Keep as base.
 Forked repo: <https://github.com/supabase-community/langchain-chatbot-demo>
 YouTube Video: <https://m.youtube.com/watch?v=Tt45NrVIBn8>
 
@@ -52,3 +53,15 @@ npx supabase gen types typescript --local --schema public > src/types/supabase.t
 ```bash
 npm run dev
 ```
+
+## Kari's Notes
+Start Docker for local Supabase
+`supabase start` or use `supabase status`
+
+use these api endpoints 
+
+/api/crawl/?urls="https://scrape-this-site.com"
+/api/textvoice/?text="Kari is the greatest coder in the world"
+
+This project has an embedded vector and scrape and more!  
+Not launched but keep for reference.

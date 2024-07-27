@@ -1,9 +1,7 @@
 import { CallbackManager } from "langchain/callbacks";
 import { LLMChain } from "langchain/chains";
 import { ChatOpenAI } from "langchain/chat_models/openai";
-import { HumanMessage } from "@langchain/core/messages";
 import { OpenAI } from "langchain/llms/openai";
-
 import { PromptTemplate } from "langchain/prompts";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { summarizeLongDocument } from "./summarizer";
